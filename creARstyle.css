@@ -1,0 +1,93 @@
+#container {
+	position: relative;
+}
+
+#imageView {
+    border: 1px solid #000;
+}
+
+#imageTemp {
+	position: absolute;
+    top: 1px;
+    left: 1px;
+}
+.palette-case {
+    width:500px;
+    text-align:center;
+}
+.palette {
+    display:inline-block;
+    border:2px solid #777;
+    height:36px;
+    width:36px;
+    border-radius: 50%;
+}
+.footer {
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 42px;
+    padding:2px;    
+}
+
+#controllers {
+  width: 600px;
+  font-size: 0.8em;
+  color: #333;
+}
+
+.controller {
+  display: inline-block;
+  background: #eee;
+  border: 1px solid #e7e7e7;
+  padding: 5px;
+}
+
+.toolbar {
+  position: relative;
+}
+
+.toolbar > canvas{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+canvas {
+    background-color: transparent;
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 150px; /* Full-width */
+    height: 15px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    background: #393c42; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 20px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    background: #393c42; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}

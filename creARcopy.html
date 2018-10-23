@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Paint</title>
+		<link rel="stylesheet" type="text/css" href="creARstyle.css">
+	    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	    <script type="text/javascript" src="canvasStack1v06.js"></script>
+		<script type="text/javascript" src="getAssociatedLocation.js"></script>
+		<script type="text/javascript" src="creARcopy.js"></script>
+
+		<script type="text/javascript" src="getAssociatedObject.js"></script>
+		<script type="text/javascript" src="Classjs/ant.gen.js"></script>
+		<script type="text/javascript" src="Classjs/bear.gen.js"></script>
+		<script type="text/javascript" src="Classjs/crab.gen.js"></script>
+		<script type="text/javascript" src="Classjs/dolphin.gen.js"></script>
+	    <script type="text/javascript" src="Classjs/helicopter.gen.js"></script>
+	    <script type="text/javascript" src="Classjs/alarmclock.gen.js"></script>
+	    <script type="text/javascript" src="Classjs/bus.gen.js"></script>
+	    <script type="text/javascript" src="Classjs/castle.gen.js"></script>
+	    <script type="text/javascript" src="Classjs/eye.gen.js"></script>
+	    <script type="text/javascript" src="Classjs/windmill.gen.js"></script>
+	    <script type="text/javascript" src="Classjs/speedboat.gen.js"></script>
+	    <script type="text/javascript" src="Classjs/key.gen.js"></script>
+
+		<script language="javascript" type="text/javascript" src="lib/p5.js"></script>
+		<script language="javascript" type="text/javascript" src="lib/numjs.js"></script>
+		<script language="javascript" type="text/javascript" src="lib/sketch_rnn.js"></script>
+		<script language="javascript" type="text/javascript" src="lib/p5.svg.js"></script>
+		<script language="javascript" type="text/javascript" src="lib/numjs.js"></script>
+		<script language="javascript" type="text/javascript" src="lib/sketch_rnn.js"></script>
+	</head>
+    <body>
+    	<div id="toolbar">
+    	</div>
+
+        <div id="container">
+        	<div class="palette-case">
+				<div class="palette black" onmousedown="selectColor(this)" style="background-color: #FFFFFF; border-style: solid;"></div>
+				<div class="palette white" onmousedown="selectColor(this)" style="background-color: #cccccc; border-style: solid;"></div>
+				<div class="palette red" onmousedown="selectColor(this)" style="background-color: #b3b3b3; border-style: solid;"></div>
+				<div class="palette orange" onmousedown="selectColor(this)" style="background-color: #999999; border-style: solid;"></div>
+				<div class="palette yellow" onmousedown="selectColor(this)" style="background-color: #808080; border-style: solid;"></div>
+				<div class="palette green" onmousedown="selectColor(this)" style="background-color: #666666; border-style: solid;"></div>
+				<div class="palette lightblue" onmousedown="selectColor(this)" style="background-color: #4d4d4d; border-style: solid;"></div>
+				<div class="palette darkblue" onmousedown="selectColor(this)" style="background-color: #333333; border-style: solid;"></div>
+				<div class="palette purple" onmousedown="selectColor(this)" style="background-color: #1a1a1a; border-style: solid;"></div>
+				<div class="palette brown" onmousedown="selectColor(this)" style="background-color: #000000; border-style: solid;"></div>
+
+    		</div>
+
+    		<div class="slidecontainer">
+    			<b> Line Thickness </b>
+  				<input type="range" class="slider" min="1" max="10" value="2" id="thickness">
+			</div>
+
+           	<div id="controllers">
+  				<span class="controller" onclick="undo()" id="undo">Undo</span>  
+  				<span class="controller" onclick="cleary()" id="clear">Clear</span>  
+  				<span class="controller" onclick="beginy()" id="save">Begin Neural Network Mode</span>
+  				<span class="controller" onclick="changelayer()" id="changelayer">New Object</span>    
+  				<span class="controller" onclick="downloadimage()" id="down">Download Current Image</span>
+  				<span class="controller" onclick="colorimage()" id="colorimage">Color Image</span>    
+			<!-- <span class="controller" onclick="startyd()" id="save">Start New Drawing</span> -->  
+			</div>
+
+            <!-- <div footer> -->
+    		<div id="input_info">
+				<form>
+					<select id="gender">
+  						<option value="M">Male</option>
+  						<option value="F">Female</option>
+  						<option value="X">Prefer Not To Answer</option>
+					</select>
+				</form>
+
+				<form>
+					<select id="age_range">
+  						<option value="2">20-29</option>
+  						<option value="3">30-39</option>
+  						<option value="4">40-49</option>
+  						<option value="5">50+</option>
+  						<option value="0">Prefer Not To Answer</option>
+					</select>
+				</form>
+			</div>
+
+			<div class="slidecontainer">
+				<b>Randomness Distribution</b>
+  				<input type="range" class="slider" min="0" max="100" value="50" id="slider">
+			</div>
+
+			</div id="canvascontainer">
+            </canvas>
+        	</div>
+    	
+    </body>
+</html>
